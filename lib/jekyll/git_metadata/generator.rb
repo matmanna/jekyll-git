@@ -68,6 +68,7 @@ module Jekyll
           'total_commits' => authors.inject(0) { |sum, h| sum += h['commits'] },
           'total_additions' => lines.inject(0) { |sum, h| sum += h['additions'] },
           'total_subtractions' => lines.inject(0) { |sum, h| sum += h['subtractions'] },
+          'commits' => lines.map { |line| commit(line['sha']) }, # Get commit data for each line
           'first_commit' => commit(lines.last['sha']),
           'last_commit' => commit(lines.first['sha'])
         }

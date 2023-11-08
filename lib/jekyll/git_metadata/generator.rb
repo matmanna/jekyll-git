@@ -32,7 +32,13 @@ module Jekyll
         cache_file = cache_dir + "/#{current_sha}.json"
 
         if File.exist?(cache_file)
-          return JSON.parse(IO.read(cache_file))
+          cached = JSON.parse(IO.read(cache_file))
+#           deserialize dates into Time objects
+          new_commits = cached['site_data']['commits'].map do |commit|
+            commit.merge('commit_date' => Time.parse(commit['commit_date']))
+          end
+          cached['site_data']['commits'] = new_commits
+          return cached
         end
 
         pages_data = {}
@@ -112,7 +118,7 @@ module Jekyll
           'author_date' => author_date,
           'commit_name' => commit_name,
           'commit_email' => commit_email,
-          'commit_date' => commit_date,
+          'commit_date' => Time.strptime(commit_date, '%a %b %d %H:%M:%S %Y %z'),
           'message' => message.gsub(/    /, ''),
           'changed_files' => changed_files.split("\n")
         }

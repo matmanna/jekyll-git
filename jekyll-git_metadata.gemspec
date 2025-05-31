@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Get access to Git information in your Jekyll templates}
   spec.homepage      = "https://github.com/joshpinto6/jekyll-git_metadata"
   spec.license       = "MIT"
-  spec.spec.metadata["homepage"] = "https://github.com/joshpinto6/jekyll-git_metadata."
+  spec.metadata["homepage"] = "https://github.com/joshpinto6/jekyll-git_metadata."
   spec.metadata["source_code_uri"] = "https://github.com/joshpinto6/jekyll-git_metadata."
 
   spec.files         = `git ls-files -z`.split("\x0")

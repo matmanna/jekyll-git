@@ -1,6 +1,9 @@
-[![Build Status](https://travis-ci.org/ivantsepp/jekyll-git_metadata.svg?branch=master)](https://travis-ci.org/ivantsepp/jekyll-git_metadata)
+# 📝 Jekyll Git Metadata
 
-# Jekyll::GitMetadata
+> [!NOTE]
+ This is a fork of a fork of a gem made for Jekyll 3. The previous fork was not published to any package registry (but made several very helpful additions) so this one serves as an accessible way to continue using the functionality of the original package in new Jekyll sites. You can see an example of the package in the footer of [this site](https://joshpinto6.github.io/doctored) and I plan on accepting contributions/improvements through PRs.
+
+## 👋 Introduction
 
 Expose Git metadata to Jekyll. Just like how Github exposes [repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages), this plugin will expose information about your git repository for your templates. For example:
 
@@ -8,12 +11,26 @@ Expose Git metadata to Jekyll. Just like how Github exposes [repository metadata
 {{site.git.total_commits}} # => Will return the total number of commits for your Jekyll repository
 ```
 
-## Installation
+See [usage](#usage) for more detail on the schema of `site.git`.
+
+## 💾 Installation
+
+My version of thie gem is installable from GitHub Package Registry (GPR)'s rubygems accesspoint. 
+
+> [!IMPORTANT]
+> You must provide a GitHub access token with `read:packages` permission to install this package! This is just something that GPR requires and you can learn more about the ways to do it [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-rubygems-registry#authenticating-with-a-personal-access-token) or see an example of how to implement this package in a GitHub action [here](https://github.com/joshpinto6/doctored/blob/main/.github/workflows/jekyll.yml)
+
+Install with the command line:
+```bash
+gem install jekyll-git_metadata
+```
 
 Add to your `Gemfile`:
 
 ```
-gem 'jekyll-git_metadata'
+source "https://rubygems.pkg.github.com/joshpinto6" do
+  gem "jekyll-git_metadata"
+end
 ```
 
 Add to your `_config.yml`:
@@ -23,7 +40,7 @@ gems:
   - jekyll-git_metadata
 ```
 
-## Usage
+## ⌨️ Usage
 
 This plugin adds a hash of git information to the `site` and `page` variables. The hash looks something like this:
 
@@ -59,13 +76,3 @@ This plugin adds a hash of git information to the `site` and `page` variables. T
 ```
 
 To access this hash, use either `page.git` or `site.git`. `page.git` contains the git information about that particuliar page/file. `site.git` contains the git information for the entire git repository. `site.git` also includes `total_files` and `project_name` variables.
-
-## Contributing
-
-1. Fork it ( https://github.com/ivantsepp/jekyll-git_metadata/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-Suggestions for more git metadata are welcomed!

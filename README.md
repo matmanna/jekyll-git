@@ -1,7 +1,7 @@
 # 📝 Jekyll Git Metadata
 
 > [!NOTE]
- This is a fork of a fork of a gem made for Jekyll 3. The previous fork was not published to any package registry (but made several very helpful additions) so this one serves as an accessible way to continue using the functionality of the original package in new Jekyll sites. You can see an example of the package in the footer of [this site](https://joshpinto6.github.io/doctored) and I plan on accepting contributions/improvements through PRs.
+ This is a fork of a [fork](https://github.com/b1r3k/jekyll-git_metadata) of a [gem](https://github.com/ivantsepp/jekyll-git_metadata) made for Jekyll 3. The previous fork was not published to any package registry (but made several very helpful additions) so this one serves as an accessible way to continue using the functionality of the original package in new Jekyll sites. You can see an example of the package in the footer of [this site](https://joshpinto6.github.io/doctored) and I plan on accepting contributions/improvements through PRs.
 
 ## 👋 Introduction
 
@@ -76,3 +76,9 @@ This plugin adds a hash of git information to the `site` and `page` variables. T
 ```
 
 To access this hash, use either `page.git` or `site.git`. `page.git` contains the git information about that particuliar page/file. `site.git` contains the git information for the entire git repository. `site.git` also includes `total_files` and `project_name` variables.
+
+## 🙌 Acknowledgements
+
+- [Ivan Tse](https://github.com/ivantsepp) - The package's original author/maintainer (2017)
+- [Łukasz Jachym ](https://github.com/b1r3k) - For forking the original and making improvements (2023)
+- Me

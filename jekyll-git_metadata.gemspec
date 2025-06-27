@@ -4,16 +4,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'jekyll/git_metadata/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-git_metadata"
+  spec.name          = "jekyll-git"
   spec.version       = Jekyll::GitMetadata::VERSION
-  spec.authors       = ["Ivan Tse"]
-  spec.email         = ["ivan.tse1@gmail.com"]
+  spec.authors       = ["joshpinto6"]
+  spec.email         = [""]
   spec.summary       = %q{Expose Git metadata to Jekyll.}
   spec.description   = %q{Get access to Git information in your Jekyll templates}
-  spec.homepage      = "https://github.com/joshpinto6/jekyll-git_metadata"
+  spec.homepage      = "https://github.com/joshpinto6/jekyll-git"
   spec.license       = "MIT"
-  spec.metadata["homepage"] = "https://github.com/joshpinto6/jekyll-git_metadata."
-  spec.metadata["source_code_uri"] = "https://github.com/joshpinto6/jekyll-git_metadata."
+  spec.metadata["homepage"] = "https://github.com/joshpinto6/jekyll"
+  spec.metadata["source_code_uri"] = "https://github.com/joshpinto6/jekyll-git"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

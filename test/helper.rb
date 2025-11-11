@@ -3,7 +3,7 @@ require 'minitest/unit'
 require 'shoulda'
 require 'mocha/mini_test'
 require 'jekyll'
-require 'jekyll-git_metadata'
+require 'jekyll-git'
 
 def jekyll_test_repo_path
   File.join(File.dirname(__FILE__), 'test_repo')

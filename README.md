@@ -22,14 +22,14 @@ My version of thie gem is installable from GitHub Package Registry (GPR)'s rubyg
 
 Install with the command line:
 ```bash
-gem install jekyll-git_metadata
+gem install jekyll-git
 ```
 
 Add to your `Gemfile`:
 
 ```
 source "https://rubygems.pkg.github.com/joshpinto6" do
-  gem "jekyll-git_metadata"
+  gem "jekyll-git"
 end
 ```
 
@@ -37,7 +37,7 @@ Add to your `_config.yml`:
 
 ```yml
 gems:
-  - jekyll-git_metadata
+  - jekyll-git
 ```
 
 ## ⌨️ Usage
